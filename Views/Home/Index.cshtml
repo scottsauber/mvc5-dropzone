@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/dropzone.min.css" rel="stylesheet" />
+<script src="~/Scripts/dropzone.js"></script>
+
+<style>
+    body {
+        background: rgb(243, 244, 245);
+    }
+
+    .dropzone {
+        border: 2px dashed #0087F7;
+        border-radius: 5px;
+        background: white;
+        font-family: "Roboto, " Open Sans ", sans-serif";
+        font-size: 20px;
+    }
+</style>
+
+<form action="~/Home" method="post" class="dropzone" id="upload">
+    <div class="dz-message">
+        Drop files here or click here to upload.
+    </div>
+</form>
+
+<script>
+    Dropzone.options.upload = {
+        uploadMultiple: true
+    };
+</script>
